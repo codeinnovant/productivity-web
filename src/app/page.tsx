@@ -1,16 +1,21 @@
-"use client";
-import { Button } from "@/components/ui/button";
-import { Play } from "lucide-react";
+import { Header } from "@/components/header";
+import { Links } from "@/components/links";
+import { Projects } from "@/components/projects";
+import { Tutorials } from "@/components/tutorials";
 
 export default function Home() {
   return (
-    <section className="py-24">
-      <div className="container">
-        <h1 className="mb-4 text-3xl font-bold">Next Template Starter</h1>
-        <Button onClick={() => console.log("click")}>
-          <Play className="mr-2 h-4 w-4" /> Get Started
-        </Button>
+    <div className="min-h-screen bg-gray-100 p-8">
+      <div className="mx-auto max-w-6xl">
+        <Header />
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <Links />
+          <Projects />
+          <div className="col-span-2">
+            <Tutorials />
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
   );
 }
