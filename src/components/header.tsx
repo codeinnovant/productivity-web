@@ -1,10 +1,30 @@
-import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
+import Link from "next/link";
 
-export function Header() {
+type HeaderProps = {
+  title: string;
+  subtitle?: string;
+  backLink?: string;
+  children?: React.ReactNode;
+};
+
+export function Header({ title, subtitle, backLink, children }: HeaderProps) {
   return (
-    <header className="flex items-center justify-between">
-      <h1 className="p-4 text-2xl font-bold">Dashboard</h1>
-      <Button className="rounded bg-blue-600 px-4 text-white">Download</Button>
+    <header className="flex items-center justify-between p-4">
+      <div className="flex items-center justify-center gap-6">
+        {backLink && (
+          <Link href={backLink}>
+            <ArrowLeft className="h-6 w-6" />
+          </Link>
+        )}
+        <div className="flex flex-col gap-1">
+          <h1 className="text-2xl font-bold">{title}</h1>
+          {subtitle && (
+            <p className="text-sm text-muted-foreground">{subtitle}</p>
+          )}
+        </div>
+      </div>
+      {children}
     </header>
   );
 }

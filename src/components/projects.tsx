@@ -59,7 +59,7 @@ export function Projects() {
   ]);
 
   return (
-    <Card>
+    <Card className="h-full">
       <CardHeader className="flex flex-row items-center pb-2">
         <CardTitle>Projects</CardTitle>
         <Button asChild size="sm" className="ml-auto gap-1" variant="link">
@@ -80,11 +80,11 @@ export function Projects() {
                     {project.description}
                   </div>
                 </TableCell>
-                <TableCell>
+                {/* <TableCell>
                   <Badge className="text-xs" variant="outline">
                     {project.status}
                   </Badge>
-                </TableCell>
+                </TableCell> */}
                 <TableCell>
                   <Progress value={project.progress} className="w-[100px]" />
                 </TableCell>

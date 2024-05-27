@@ -18,6 +18,10 @@ and deploying web applications.
 - **Lucide Icons**: A collection of beautiful and customizable icons, designed
   to be consistent and pixel-perfect.
 
+## Useful Links
+
+https://supabase.com/partners/integrations/prisma
+
 ## Getting Started
 
 First, run the development server:

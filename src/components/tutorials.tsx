@@ -55,7 +55,7 @@ export function Tutorials() {
   ]);
 
   return (
-    <Card className="rounded-lg border border-gray-200 bg-white p-6 shadow-lg">
+    <Card className="h-full rounded-lg border border-gray-200 bg-white p-6 shadow-lg">
       <CardHeader className="flex flex-row items-center justify-between pb-2">
         <CardTitle className="text-xl font-semibold text-gray-800">
           Tutorials
