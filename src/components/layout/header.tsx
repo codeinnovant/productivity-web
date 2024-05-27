@@ -18,7 +18,9 @@ export function Header({ title, subtitle, backLink, children }: HeaderProps) {
           </Link>
         )}
         <div className="flex flex-col gap-1">
-          <h1 className="text-2xl font-bold">{title}</h1>
+          <h1 className="flex-1 shrink-0 whitespace-nowrap text-xl font-semibold tracking-tight sm:grow-0">
+            {title}
+          </h1>
           {subtitle && (
             <p className="text-sm text-muted-foreground">{subtitle}</p>
           )}
